@@ -1,0 +1,4 @@
+一个服务注册中心，eureka server,端口为8061
+service-hi工程跑了两个实例，端口分别为6001,6002，分别向服务注册中心注册
+sercvice-ribbon端口为7001,向服务注册中心注册
+当sercvice-ribbon通过restTemplate调用service-hi的hi接口时，因为用ribbon进行了负载均衡，会轮流的调用service-hi：6001和6002 两个端口的hi接口；

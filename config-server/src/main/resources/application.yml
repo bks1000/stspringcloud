@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/zhongzunfa/spring-cloud-config.git
+          search-paths: V1-DEV
+  application:
+      name: config-server
+server:
+    port: 8888
+
+
+
+#spring.cloud.config.server.git.uri=https://github.com/forezp/SpringcloudConfig/      #配置git仓库地址
+#spring.cloud.config.server.git.searchPaths=respo                                     #配置仓库路径
+#spring.cloud.config.label=master                                                     #配置仓库的分支
+#spring.cloud.config.server.git.username=your username                                #访问git仓库的用户名
+#spring.cloud.config.server.git.password=your password                                #访问git仓库的用户密码
+
+#测试
+#直接在浏览器地址栏访问：http://localhost:8888/config/info
+#其实访问的文件为：https://gitee.com/zhongzunfa/spring-cloud-config/blob/master/V1-DEV/config-info.yml
+#返回结果：{"name":"config","profiles":["info"],"label":null,"version":"201917124912c018eb88adebf5b7d11d1c1c05bf","state":null,"propertySources":[{"name":"https://gitee.com/zhongzunfa/spring-cloud-config.git/V1-DEV/config-info.yml","source":{"eureka.client.service-url.defaultZone":"http://localhost:9871/eureka"}}]}
+#证明配置服务中心可以从远程程序获取配置信息。
+
+#http请求地址和资源文件映射如下:
+#   /{application}/{profile}[/{label}]
+#   /{application}-{profile}.yml
+#   /{label}/{application}-{profile}.yml
+#   /{application}-{profile}.properties
+#   /{label}/{application}-{profile}.properties

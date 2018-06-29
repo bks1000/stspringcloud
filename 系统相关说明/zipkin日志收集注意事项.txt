@@ -1,0 +1,63 @@
+出自：https://blog.csdn.net/duanqing_song/article/details/80422301
+
+1、必须要在方法中打印log,才能收集（废话）；
+
+2、spring.application.name 不能包含下划线，因为在eureka中java.net.URI不能区分下划线，否则在进行服务调用的时候报错（host name may not be null）；
+
+3、日志中[demo-trace1,63c082f6715c8979,63c082f6715c8979,true],true代表上传成功；
+
+4、调用方法不能以/trace命名（http://localhost:9101/trace），否则日志不能上传到日志服务器上，应该是与系统自带的方法有冲突（可以用http://localhost:9101/trace0，http://localhost:9101/a/trace等方式）；
+
+5、在测试时，请将spring.application.sleuth.sampler.probability=1设置为1（默认为0.1），否则要调用10次才会上传成功1次；
+
+6、只需要引入spring-cloud-starter-zipkin包；
+
+7、关于 Zipkin 的服务端，在使用 Spring Boot 2.x 版本后，官方就不推荐自行定制编译了，反而是直接提供了编译好的 jar 包来给我们使用；
+
+所以官方提供了一键脚本：
+curl -sSL https://zipkin.io/quickstart.sh | bash -s
+java -jar zipkin.jar
+如果用 Docker 的话，直接 docker run -d -p 9411:9411 openzipkin/zipkin
+如果非要自己建服务端，只需要在pom中引入以下包
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+<dependency>
+		    <groupId>io.zipkin.java</groupId>
+		    <artifactId>zipkin-server</artifactId>
+		    <version>2.8.3</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.zipkin.java</groupId>
+		    <artifactId>zipkin-autoconfigure-ui</artifactId>
+		    <version>2.8.3</version>
+		</dependency>
+
+然后在启动类上加上@zipkin.server.internal.EnableZipkinServer
+
+或者 @zipkin.server.EnableZipkinServer（后一个已被弃用，暂时不清楚两个的区别）；
+
+8、自建zipkin服务启动后，访问localhost:9411,后台可能会报错：
+java.lang.IllegalArgumentException: Prometheus requires that all meters with the same name have the same set of tag keys. There is already an existing meter containing tag keys [method, status, uri]. The meter you are attempting to register has keys [exception, method, status, uri].
+可以不用关注这个问题，服务器一样能收集到日志，也可以有两种处理方式：
+a、将management.metrics.web.server.auto-time-requests=false设置为false,默认为true;
+b、重写DefaultWebMvcTagsProvider或者实现接口WebMvcTagsProvider，参照DefaultWebMvcTagsProvider的写法，只需要把DefaultWebMvcTagsProvider下getTages()方法的WebMvcTags.exception(exception)去除掉。
+public class DemoTagsProvider implements WebMvcTagsProvider{
+static Logger logger = LoggerFactory.getLogger(DemoTagsProvider.class);
+@Override
+public Iterable<Tag> getTags(HttpServletRequest request, HttpServletResponse response, Object handler,
+Throwable exception) {
+return Tags.of(WebMvcTags.method(request), WebMvcTags.uri(request, response),
+WebMvcTags.status(response));
+}
+@Override
+public Iterable<Tag> getLongRequestTags(HttpServletRequest request, Object handler) {
+return Tags.of(WebMvcTags.method(request), WebMvcTags.uri(request, null));
+}
+}
+然后再启动类中注入bean ：
+@Bean
+public DemoTagsProvider demoTagsProvider(){
+return new DemoTagsProvider();
+}

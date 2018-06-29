@@ -1,0 +1,32 @@
+#首先指定服务注册中心的地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+
+#spring boot 启动端口
+server:
+  port: 7200
+
+#服务名
+spring:
+  application:
+    name: service-zuul
+  zipkin:
+    base-url: http://localhost:9000
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+#以/api-a/ 开头的请求都转发给service-ribbon服务；以/api-b/开头的请求都转发给service-feign服务；
+# 请求地址：http://localhost:7200/api-a/hi?name=123
+#           http://localhost:7200/api-b/hi?name=123
+# 这说明zuul起到了路由的作用
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign

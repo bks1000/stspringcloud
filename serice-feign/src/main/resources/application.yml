@@ -1,0 +1,33 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+server:
+  port: 7100
+spring:
+  application:
+    name: service-feign
+  zipkin:
+    base-url: http://localhost:9000
+  sleuth:
+    sampler:
+      percentage: 1.0
+    feign:
+      enabled: true
+#Actuator 配置
+management:
+  server:
+    port: 8011  #Actuator访问端口
+    address: 127.0.0.1  #Actuator访问者
+  endpoints:
+    enabled-by-default: true #设置所有端点可访问
+    web:
+      base-path: / #指定actuator访问路径，默认是/actuator
+hystrix:
+  metrics:
+    enabled: true
+
+#必须设置为true，否则， Feign 通道的数据将不会被检测到，会一直显示 Loading
+feign:
+  hystrix:
+    enabled: true  #有的网文说是enable，应该是spring boot的版本不对。

@@ -1,0 +1,23 @@
+server:
+  port: 8061
+eureka:
+  instance:
+    hostname: localhost
+    #preferIpAddress: true                             #使用IP进行配置
+    #instanceId:  172.18.15.112:${server.port}
+    #ipAddress: 172.18.15.112                           #指定本节点的IP
+    #确保eureka服务器可以检测到应用程序是启动还是关闭
+    #leaseRenewalIntervalInSeconds: 5
+    #leaseExpirationDurationInSeconds: 5
+  client:
+    registerWithEureka:  false    #配置集群使用true
+    fetchRegistry:   false          #配置集群使用true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+#management.endpoints.web.exposure.include=*
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

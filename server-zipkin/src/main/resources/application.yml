@@ -1,0 +1,13 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+#请求地址 ：http://localhost:9000/zipkin/
+
+#测试
+#四个项目均启动后，在浏览器中访问地址：http://localhost:7200/hi?name=neo 两次，然后再打开地址： http://localhost:9000/zipkin/点击对应按钮进行查看。
+server:
+  port: 9000
+spring:
+  application:
+    name: zipkin-server

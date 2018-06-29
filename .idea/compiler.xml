@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="allin" />
+        <module name="config-client" />
+        <module name="config-server" />
+        <module name="hystrix-dashborad" />
+        <module name="registry-server" />
+        <module name="serice-feign" />
+        <module name="server-zipkin" />
+        <module name="service-ribbon" />
+        <module name="service-user" />
+        <module name="service-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="allin" target="1.5" />
+      <module name="config-client" target="1.8" />
+      <module name="config-server" target="1.8" />
+      <module name="hystrix-dashborad" target="1.8" />
+      <module name="registry-server" target="1.8" />
+      <module name="serice-feign" target="1.8" />
+      <module name="server-zipkin" target="1.8" />
+      <module name="service-ribbon" target="1.8" />
+      <module name="service-user" target="1.8" />
+      <module name="service-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
