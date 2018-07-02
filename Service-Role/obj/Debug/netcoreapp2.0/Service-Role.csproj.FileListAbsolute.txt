@@ -1,0 +1,11 @@
+D:\MyCode\test\aspnetcore\webapp\Service-Role\bin\Debug\netcoreapp2.0\Service-Role.deps.json
+D:\MyCode\test\aspnetcore\webapp\Service-Role\bin\Debug\netcoreapp2.0\Service-Role.runtimeconfig.json
+D:\MyCode\test\aspnetcore\webapp\Service-Role\bin\Debug\netcoreapp2.0\Service-Role.runtimeconfig.dev.json
+D:\MyCode\test\aspnetcore\webapp\Service-Role\bin\Debug\netcoreapp2.0\Service-Role.dll
+D:\MyCode\test\aspnetcore\webapp\Service-Role\obj\Debug\netcoreapp2.0\Service-Role.csproj.CoreCompileInputs.cache
+D:\MyCode\test\aspnetcore\webapp\Service-Role\obj\Debug\netcoreapp2.0\Service-Role.AssemblyInfoInputs.cache
+D:\MyCode\test\aspnetcore\webapp\Service-Role\obj\Debug\netcoreapp2.0\Service-Role.AssemblyInfo.cs
+D:\MyCode\test\aspnetcore\webapp\Service-Role\bin\Debug\netcoreapp2.0\Service-Role.pdb
+D:\MyCode\test\aspnetcore\webapp\Service-Role\obj\Debug\netcoreapp2.0\Service-Role.dll
+D:\MyCode\test\aspnetcore\webapp\Service-Role\obj\Debug\netcoreapp2.0\Service-Role.pdb
+D:\MyCode\test\aspnetcore\webapp\Service-Role\obj\Debug\netcoreapp2.0\Service-Role.csprojResolveAssemblyReference.cache

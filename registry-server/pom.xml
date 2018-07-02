@@ -73,6 +73,13 @@
 			</plugin>
 		</plugins>
 	</build>
+<!--
+安装单独的Eureka服务
 
+安装tomcat，到apache官网http://tomcat.apache.org下载tomcat
+下载Eureka，可以到http://mvnrepository.com/artifact/com.netflix.eureka/eureka-server选择一下版本下载
+配置端口，默认是8080，tomcat\webapps\eureka\WEB-INF\classes\eureka-client.properties
+重启tomcat服务即可
+-->
 
 </project>
