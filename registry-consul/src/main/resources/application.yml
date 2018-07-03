@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        tags: dev
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 15s
+        instance-id: registry-consul
+  application:
+    name: registry-consul
+server:
+  port: 8502
+
+
+#consul  启动脚本：  $consul agent -dev -ui
+#本项目用于向 consul注册服务，服务的消费在另外一个项目中实现

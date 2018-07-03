@@ -4,18 +4,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.june</groupId>
-	<artifactId>registry-server</artifactId>
+	<artifactId>registry-consul</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>registry-server</name>
-	<description>Eureka server</description>
+	<name>registry-consul</name>
+	<description>服务注册(consul) consul server</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.3.RELEASE</version>
-		<relativePath/>
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -27,29 +27,36 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
 		</dependency>
-
-
-		<!--<dependency>
+		<!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-core-->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-core</artifactId>
+			<version>1.0.5</version>
+		</dependency>
+		<!--用于consul健康检查 health-->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
+			<artifactId>spring-boot-actuator</artifactId>
+			<version>2.0.3.RELEASE</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>-->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-actuator-autoconfigure</artifactId>
+			<version>2.0.3.RELEASE</version>
+		</dependency>
 
 	</dependencies>
 
@@ -73,13 +80,6 @@
 			</plugin>
 		</plugins>
 	</build>
-<!--
-安装单独的Eureka服务
 
-安装tomcat，到apache官网http://tomcat.apache.org下载tomcat
-下载Eureka，可以到http://mvnrepository.com/artifact/com.netflix.eureka/eureka-server选择一下版本下载
-配置端口，默认是8080，tomcat\webapps\eureka\WEB-INF\classes\eureka-client.properties
-重启tomcat服务即可
--->
 
 </project>

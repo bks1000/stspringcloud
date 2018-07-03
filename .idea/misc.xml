@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/service-zuul/pom.xml" />
         <option value="$PROJECT_DIR$/server-zipkin/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix-dashborad/pom.xml" />
+        <option value="$PROJECT_DIR$/registry-consul/pom.xml" />
       </list>
     </option>
   </component>

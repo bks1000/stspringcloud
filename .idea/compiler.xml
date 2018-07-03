@@ -10,6 +10,7 @@
         <module name="config-client" />
         <module name="config-server" />
         <module name="hystrix-dashborad" />
+        <module name="registry-consul" />
         <module name="registry-server" />
         <module name="serice-feign" />
         <module name="server-zipkin" />
@@ -23,6 +24,7 @@
       <module name="config-client" target="1.8" />
       <module name="config-server" target="1.8" />
       <module name="hystrix-dashborad" target="1.8" />
+      <module name="registry-consul" target="1.8" />
       <module name="registry-server" target="1.8" />
       <module name="serice-feign" target="1.8" />
       <module name="server-zipkin" target="1.8" />

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/config-client/config-client.iml" filepath="$PROJECT_DIR$/config-client/config-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/hystrix-dashborad/hystrix-dashborad.iml" filepath="$PROJECT_DIR$/hystrix-dashborad/hystrix-dashborad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/registry-consul/registry-consul.iml" filepath="$PROJECT_DIR$/registry-consul/registry-consul.iml" />
       <module fileurl="file://$PROJECT_DIR$/registry-server/registry-server.iml" filepath="$PROJECT_DIR$/registry-server/registry-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/serice-feign/serice-feign.iml" filepath="$PROJECT_DIR$/serice-feign/serice-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-zipkin/server-zipkin.iml" filepath="$PROJECT_DIR$/server-zipkin/server-zipkin.iml" />
