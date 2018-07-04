@@ -4,7 +4,7 @@ spring:
       host: localhost
       port: 8500
       discovery:
-        tags: dev
+        tags: dev,spring boot
         healthCheckPath: /actuator/health
         healthCheckInterval: 15s
         instance-id: registry-consul
@@ -16,3 +16,4 @@ server:
 
 #consul  启动脚本：  $consul agent -dev -ui
 #本项目用于向 consul注册服务，服务的消费在另外一个项目中实现
+#Consul 使用手册: http://www.liangxiansen.cn/2017/04/06/consul/

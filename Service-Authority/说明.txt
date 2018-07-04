@@ -1,0 +1,6 @@
+﻿将服务注册到Consul服务中，并调用registry-consul服务，注意NuGet包
+
+参考：https://www.cnblogs.com/xishuai/archive/2017/11/15/ubuntu-docker-consul-fabio-aspnet-core.html
+
+
+Consul参考：http://www.likecs.com/default/index/show?id=20241

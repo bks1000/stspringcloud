@@ -1,0 +1,11 @@
+D:\MyCode\test\aspnetcore\webapp\Service-Authority\bin\Debug\netcoreapp2.0\Service-Authority.deps.json
+D:\MyCode\test\aspnetcore\webapp\Service-Authority\bin\Debug\netcoreapp2.0\Service-Authority.runtimeconfig.json
+D:\MyCode\test\aspnetcore\webapp\Service-Authority\bin\Debug\netcoreapp2.0\Service-Authority.runtimeconfig.dev.json
+D:\MyCode\test\aspnetcore\webapp\Service-Authority\bin\Debug\netcoreapp2.0\Service-Authority.dll
+D:\MyCode\test\aspnetcore\webapp\Service-Authority\obj\Debug\netcoreapp2.0\Service-Authority.csprojResolveAssemblyReference.cache
+D:\MyCode\test\aspnetcore\webapp\Service-Authority\obj\Debug\netcoreapp2.0\Service-Authority.csproj.CoreCompileInputs.cache
+D:\MyCode\test\aspnetcore\webapp\Service-Authority\obj\Debug\netcoreapp2.0\Service-Authority.AssemblyInfoInputs.cache
+D:\MyCode\test\aspnetcore\webapp\Service-Authority\obj\Debug\netcoreapp2.0\Service-Authority.AssemblyInfo.cs
+D:\MyCode\test\aspnetcore\webapp\Service-Authority\bin\Debug\netcoreapp2.0\Service-Authority.pdb
+D:\MyCode\test\aspnetcore\webapp\Service-Authority\obj\Debug\netcoreapp2.0\Service-Authority.dll
+D:\MyCode\test\aspnetcore\webapp\Service-Authority\obj\Debug\netcoreapp2.0\Service-Authority.pdb
