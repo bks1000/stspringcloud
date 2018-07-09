@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28d21b82-ff18-47d9-ab84-04ba5e5c06f0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registry-consul/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/registry-consul/src/main/resources/application.yml" />
-    </list>
+    <list default="true" id="28d21b82-ff18-47d9-ab84-04ba5e5c06f0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/config-server/target/" />
@@ -489,12 +487,12 @@
       <updated>1529894384255</updated>
       <workItem from="1529894385487" duration="42885000" />
       <workItem from="1530086106479" duration="1894000" />
-      <workItem from="1530088033883" duration="41384000" />
+      <workItem from="1530088033883" duration="43182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86163000" />
+    <option name="totallyTimeSpent" value="87961000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
