@@ -40,6 +40,13 @@ http://localhost:8500/v1/catalog/service/{registry-consul（服务名称）}
 注意101和102的启动命令中，有一句 -join 192.168.80.100 => 有了这一句，就把101和102加入到了100所在的集群中。
 
 
+consul启动开发模式
+D:\SoftwareGree\consul>consul.exe agent -dev
+
+
+gonconsul 文件夹：golang向consul注册服务，测试成功。
+
+
 
 
 
